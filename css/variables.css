@@ -2,4 +2,6 @@
 
 :root {
     --font-principal: 'Ubuntu', sans-serif;
+    --color-background: #ffffff;
+    --color-text: #333333;
 }
