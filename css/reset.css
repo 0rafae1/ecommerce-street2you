@@ -21,6 +21,15 @@ body {
     text-rendering: optimizeSpeed;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
 img,
 picture,
 svg,

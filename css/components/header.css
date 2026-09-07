@@ -1,0 +1,40 @@
+.header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40%);
+    border-radius: 15px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.75rem;
+}
+
+.logo img {
+    height: 2.5rem;
+}
+
+.nav-center ul, .nav-right ul {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-center a,
+.nav-right a {
+    font-size: 1.25rem;
+}
+.nav-center a:hover,
+.nav-right a:hover {
+    font-size: 1.25rem;
+    color:#F3903D;
+}
+.nav-right img{
+    height: 1.25rem;
+}
+.nav-right a:hover img{
+    opacity: 0.5;
+}
