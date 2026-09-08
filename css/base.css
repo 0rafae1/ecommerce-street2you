@@ -17,8 +17,13 @@ body {
 }
 .btn:hover {
     opacity: 0.9;
-    cursor: pointer;
     color: #F3903D;
+}
+.btn-outline:hover {
+    background-color: #F3903D;
+    color: #ffffff;
+    border-color: #F3903D;
+    cursor: pointer;
 }
 
 .btn-outline {
@@ -26,6 +31,7 @@ body {
     color: #ffffff;
     border: 2px solid #ffffff;
     line-height: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-filled {
