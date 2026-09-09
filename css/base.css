@@ -2,7 +2,11 @@ body {
     font-family: var(--font-principal);
     background-color: var(--color-background);
     color: var(--color-text);
-    margin: 30px
+}
+main {
+    padding: 2rem 2rem 0;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 
 .btn {
