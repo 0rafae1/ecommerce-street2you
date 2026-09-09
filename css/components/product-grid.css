@@ -1,0 +1,77 @@
+.card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.top1 {
+    grid-area: top1;
+    background-image: url(../../assets/images/products/hero-highligth.jpg);
+}
+
+.top2 {
+    grid-area: top2;
+    background-image: url(../../assets/images/products/desert-camo.jpg);
+}
+
+.midL {
+    grid-area: midL;
+    background-image: url(../../assets/images/products/modelo-masculino.jpg);
+}
+
+.midR {
+    grid-area: midR;
+    background-image: url(../../assets/images/products/solstice-caramel.jpg);
+}
+
+.bottomL {
+    grid-area: bottomL;
+    background-image: url(../../assets/images/products/nomad-olive.jpg);
+}
+
+.bottomR {
+    grid-area: bottomR;
+    background-image: url(../../assets/images/products/wave-ridge.jpg);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas:
+        "top1 top1 top2 top2"
+        "top1 top1 midL midR"
+        "bottomL bottomL midL bottomR";
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.top1-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.top1-tittle{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.top1-subtittle{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-group{
+    display: flex;
+    gap: 16px;
+}
