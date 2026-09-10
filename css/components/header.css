@@ -1,7 +1,7 @@
 .header {
     background-color: #ffffff;
     position: fixed;
-    top: 60px;
+    top: 3.75rem;
     left: 50%;
     transform: translateX(-50%);
     width: calc(80% - 4rem);
@@ -16,6 +16,7 @@
 
 .logo img {
     height: 2.8rem;
+    transform: translateZ(0);
 }
 
 .nav-center{
@@ -47,4 +48,36 @@
 }
 .nav-right a:hover img{
     opacity: 0.5;
+}
+
+.nav-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #27374F;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.nav-icon-user {
+    -webkit-mask-image: url('../../assets/images/icons/user-icon.svg');
+    mask-image: url('../../assets/images/icons/user-icon.svg');
+}
+
+.nav-icon-help {
+    -webkit-mask-image: url('../../assets/images/icons/help-icon.svg');
+    mask-image: url('../../assets/images/icons/help-icon.svg');
+}
+
+.nav-icon-cart {
+    -webkit-mask-image: url('../../assets/images/icons/shopping-cart-icon.svg');
+    mask-image: url('../../assets/images/icons/shopping-cart-icon.svg');
+}
+
+.nav-right a:hover .nav-icon {
+    background-color: #F3903D;
 }
