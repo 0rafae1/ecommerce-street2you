@@ -49,29 +49,33 @@
     margin-top: 2.5rem;
 }
 
-.top1-content{
+.top1-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: #ffffff;
 }
 
-.top1-tittle{
+.top1-tittle {
     color: #ffffff;
     font-weight: 400;
     font-size: 1.25rem;
     margin-bottom: 0.625rem;
 }
 
-.top1-subtittle{
+.top1-subtittle {
     color: #ffffff;
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
 }
 
-.cta-group{
+.cta-group {
     display: flex;
     gap: 1rem;
 }
