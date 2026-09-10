@@ -40,13 +40,13 @@
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(3, 18.75rem);
     grid-template-areas:
         "top1 top1 top2 top2"
         "top1 top1 midL midR"
         "bottomL bottomL midL bottomR";
-    gap: 30px;
-    margin-top: 40px;
+    gap: 1.875rem;
+    margin-top: 2.5rem;
 }
 
 .top1-content{
@@ -61,17 +61,17 @@
     color: #ffffff;
     font-weight: 400;
     font-size: 1.25rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .top1-subtittle{
     color: #ffffff;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .cta-group{
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
