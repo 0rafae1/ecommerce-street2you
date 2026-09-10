@@ -81,3 +81,108 @@
 .nav-right a:hover .nav-icon {
     background-color: #F3903D;
 }
+
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle-label{
+        display: none;
+    }
+
+.menu-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #27374F;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.menu-toggle-label:hover .menu-icon {
+    background-color: #F3903D;
+}
+
+.menu-icon-hamburger {
+    -webkit-mask-image: url('../../assets/images/icons/menu.svg');
+    mask-image: url('../../assets/images/icons/menu.svg');
+}
+
+@media (max-width: 1280px){
+    .header{
+        width: calc(90% - 2rem);
+        justify-content: space-between;
+    }
+
+    .menu-toggle-label{
+        display: block;
+        padding-top: 0.5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-container{
+        position: fixed;
+        top:0;
+        right: 0px;
+        transform: translateX(140%);
+        width: 200px;
+        flex-direction: column;
+        padding: 40px 20px 0px;
+        background-color: #ffffff;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        align-items: flex-start;
+        border-radius: 10px;
+    }
+
+    .nav-center,
+    .nav-right{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-center li,
+    .nav-right li{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-center ul,
+    .nav-right ul{
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .nav-center ul li,
+    .nav-right ul li{
+        width: 100%;
+    }
+
+    .nav-center a,
+    .nav-right a{
+        width: 100%;
+        border-bottom: 1px solid #eeeeee;
+        padding: 0.3rem 0;
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .nav-container{
+        transform: translateX(0);
+    }
+}

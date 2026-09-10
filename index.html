@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/components/header.css">
     <link rel="stylesheet" href="./css/components/hero.css">
     <link rel="stylesheet" href="./css/components/product-category.css">
@@ -30,34 +29,42 @@
                 <img src="./assets/images/icons/logo.svg" alt="Street2You - As ruas que encontram você">
             </a>
         </h1>
-        <nav class="nav-center" aria-label="Categorias Principais">
-            <ul>
-                <li><a href="#">Masculino</a></li>
-                <li><a href="#">Feminino</a></li>
-                <li><a href="#">Outlet</a></li>
-            </ul>
-        </nav>
-        <nav class="nav-right" aria-label="Acesso rápido">
-            <ul>
-                <li><a href="#">Nossas lojas</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li>
-                    <a href="#" aria-label="Minha conta">
-                        <span class="nav-icon nav-icon-user"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Ajuda">
-                        <span class="nav-icon nav-icon-help"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Sacola de compras">
-                        <span class="nav-icon nav-icon-cart"></span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+        <input type="checkbox" class="menu-toggle" id="menu-toggle">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="menu-icon menu-icon-hamburger"></span>
+        </label>
+        
+        <div class="nav-container">
+            <nav class="nav-center" aria-label="Categorias Principais">
+                <ul>
+                    <li><a href="#">Masculino</a></li>
+                    <li><a href="#">Feminino</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-right" aria-label="Acesso rápido">
+                <ul>
+                    <li><a href="#">Nossas lojas</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li>
+                        <a href="#" aria-label="Minha conta">
+                            <span class="nav-icon nav-icon-user"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Ajuda">
+                            <span class="nav-icon nav-icon-help"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Sacola de compras">
+                            <span class="nav-icon nav-icon-cart"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
