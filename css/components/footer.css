@@ -25,6 +25,10 @@
     gap: 2.5rem;
 }
 
+.footer-links a{
+    color: #ffffff;
+}
+
 .social-list{
     display: flex;
     gap: 1.25rem;
