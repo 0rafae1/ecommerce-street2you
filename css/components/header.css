@@ -1,5 +1,5 @@
 .header {
-    background-color: #ffffff;
+    background-color: var(--color--background);
     position: fixed;
     top: 3.75rem;
     left: 50%;
@@ -14,47 +14,52 @@
     padding: 0.75rem 1.25rem;
 }
 
-.logo img {
+.header__logo img {
     height: 2.8rem;
     transform: translateZ(0);
 }
 
-.nav-center{
+.header__nav-center {
     margin-left: 2rem;
 }
 
-.nav-right{
+.header__nav-right {
     margin-left: auto;
 }
 
-.nav-center ul, .nav-right ul {
+.header__nav-center ul,
+.header__nav-right ul {
     display: flex;
     gap: 2.5rem;
     align-items: center;
 }
 
-.nav-center a,
-.nav-right a {
-    color: #27374F;
+.header__nav-center a,
+.header__nav-right a {
+    color: var(--color--secondary);
     font-size: 1.25rem;
 }
-.nav-center a:hover,
-.nav-right a:hover {
+
+.header__nav-center a:hover,
+.header__nav-right a:hover {
     font-size: 1.25rem;
-    color:#F3903D;
+    color: var(--color--primary);
 }
-.nav-right img{
+
+.header__nav-right img {
     height: 1.5rem;
 }
-.nav-right a:hover img{
+
+.header__nav-right a:hover img {
     opacity: 0.5;
 }
 
-.nav-icon {
+/* Ícones com mask-image: usa o SVG como máscara de recorte, permitindo colorir o ícone dinamicamente via background-color no hover com um único arquivo */
+.header__nav-icon {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: #27374F;
+    background-color: var(--color--secondary);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -63,45 +68,45 @@
     mask-position: center;
 }
 
-.nav-icon-user {
+.header__nav-icon--user {
     -webkit-mask-image: url('../../assets/images/icons/user-icon.svg');
     mask-image: url('../../assets/images/icons/user-icon.svg');
 }
 
-.nav-icon-help {
+.header__nav-icon--help {
     -webkit-mask-image: url('../../assets/images/icons/help-icon.svg');
     mask-image: url('../../assets/images/icons/help-icon.svg');
 }
 
-.nav-icon-cart {
+.header__nav-icon--cart {
     -webkit-mask-image: url('../../assets/images/icons/shopping-cart-icon.svg');
     mask-image: url('../../assets/images/icons/shopping-cart-icon.svg');
 }
 
-.nav-right a:hover .nav-icon {
-    background-color: #F3903D;
+.header__nav-right a:hover .header__nav-icon {
+    background-color: var(--color--primary);
 }
 
-.nav-container{
+.header__nav-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
     align-items: center;
 }
 
-.menu-toggle{
+.header__menu-toggle {
     display: none;
 }
 
-.menu-toggle-label{
-        display: none;
-    }
+.header__menu-toggle-label {
+    display: none;
+}
 
-.menu-icon {
+.header__menu-icon {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: #27374F;
+    background-color: var(--color--secondary);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -110,79 +115,80 @@
     mask-position: center;
 }
 
-.menu-toggle-label:hover .menu-icon {
-    background-color: #F3903D;
+.header__menu-toggle-label:hover .header__menu-icon {
+    background-color: var(--color--primary);
 }
 
-.menu-icon-hamburger {
+.header__menu-icon--hamburger {
     -webkit-mask-image: url('../../assets/images/icons/menu.svg');
     mask-image: url('../../assets/images/icons/menu.svg');
 }
 
-@media (max-width: 1280px){
-    .header{
+@media (max-width: 1280px) {
+    .header {
         width: calc(90% - 2rem);
         justify-content: space-between;
     }
 
-    .menu-toggle-label{
+    .header__menu-toggle-label {
         display: block;
         padding-top: 0.5rem;
         cursor: pointer;
         z-index: 1001;
     }
 
-    .nav-container{
+    .header__nav-container {
         position: fixed;
-        top:0;
+        top: 0;
         right: 0px;
         transform: translateX(140%);
         width: 200px;
         flex-direction: column;
         padding: 40px 20px 0px;
-        background-color: #ffffff;
+        background-color: var(--color--background);
         gap: 2rem;
         transition: right 0.3s ease;
         align-items: flex-start;
         border-radius: 20px;
     }
 
-    .nav-center,
-    .nav-right{
+    .header__nav-center,
+    .header__nav-right {
         width: 100%;
         text-align: center;
         margin: 0;
     }
 
-    .nav-center li,
-    .nav-right li{
+    .header__nav-center li,
+    .header__nav-right li {
         width: 100%;
         text-align: center;
         margin: 0;
     }
 
-    .nav-center ul,
-    .nav-right ul{
+    .header__nav-center ul,
+    .header__nav-right ul {
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
     }
 
-    .nav-center ul li,
-    .nav-right ul li{
+    .header__nav-center ul li,
+    .header__nav-right ul li {
         width: 100%;
     }
 
-    .nav-center a,
-    .nav-right a{
+    .header__nav-center a,
+    .header__nav-right a {
         width: 100%;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid var(--color--border);
         padding: 0.3rem 0;
         font-size: 1.2rem;
         display: block;
     }
 
-    .menu-toggle:checked ~ .nav-container{
+    /* Checkbox Hack: alterna o menu mobile usando apenas CSS quando o input checkbox estiver marcado (:checked), dispensando o uso de JavaScript */
+    .header__menu-toggle:checked ~ .header__nav-container {
         transform: translateX(0);
     }
 }

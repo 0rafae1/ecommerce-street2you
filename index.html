@@ -22,44 +22,43 @@
 </head>
 
 <body>
-    <!-- Header com logo e navegação -->
     <header class="header">
-        <h1 class="logo">
+        <h1 class="header__logo">
             <a href="/" title="Street2You - As ruas que encontram você">
                 <img src="./assets/images/icons/logo.svg" alt="Street2You - As ruas que encontram você">
             </a>
         </h1>
 
-        <input type="checkbox" class="menu-toggle" id="menu-toggle">
-        <label for="menu-toggle" class="menu-toggle-label">
-            <span class="menu-icon menu-icon-hamburger"></span>
+        <input type="checkbox" class="header__menu-toggle" id="menu-toggle">
+        <label for="menu-toggle" class="header__menu-toggle-label">
+            <span class="header__menu-icon header__menu-icon--hamburger"></span>
         </label>
 
-        <div class="nav-container">
-            <nav class="nav-center" aria-label="Categorias Principais">
+        <div class="header__nav-container">
+            <nav class="header__nav-center" aria-label="Categorias Principais">
                 <ul>
                     <li><a href="#">Masculino</a></li>
                     <li><a href="#">Feminino</a></li>
                     <li><a href="#">Outlet</a></li>
                 </ul>
             </nav>
-            <nav class="nav-right" aria-label="Acesso rápido">
+            <nav class="header__nav-right" aria-label="Acesso rápido">
                 <ul>
                     <li><a href="#">Nossas lojas</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li>
                         <a href="#" aria-label="Minha conta">
-                            <span class="nav-icon nav-icon-user"></span>
+                            <span class="header__nav-icon header__nav-icon--user"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Ajuda">
-                            <span class="nav-icon nav-icon-help"></span>
+                            <span class="header__nav-icon header__nav-icon--help"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Sacola de compras">
-                            <span class="nav-icon nav-icon-cart"></span>
+                            <span class="header__nav-icon header__nav-icon--cart"></span>
                         </a>
                     </li>
                 </ul>
@@ -68,98 +67,94 @@
     </header>
 
     <main>
-        <!-- Seção hero -->
         <section class="hero">
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <span class="hero-subtitle">Techwear</span>
-                    <h2 class="hero-title">Dê o primeiro passo para o estilo que você busca.</h2>
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-filled">Comprar</a>
-                        <a href="#" class="btn btn-outline">Mais modelos</a>
+            <div class="hero__overlay">
+                <div class="hero__content">
+                    <span class="hero__subtitle">Techwear</span>
+                    <h2 class="hero__title">Dê o primeiro passo para o estilo que você busca.</h2>
+                    <div class="hero__buttons">
+                        <a href="#" class="btn btn--filled">Comprar</a>
+                        <a href="#" class="btn btn--outline">Mais modelos</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de categorias de tênis -->
         <section class="categories">
-            <div class="category-card basico">
-                <a href="#" class="category-link">
-                    <span class="overlay"></span>
-                    <span class="category-name btn btn-outline">Básico</span>
+            <div class="category-card category-card--basic">
+                <a href="#" class="category-card__link">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__name btn btn--outline">Básico</span>
                 </a>
             </div>
-            <div class="category-card urbano">
-                <a href="#" class="category-link">
-                    <span class="overlay"></span>
-                    <span class="category-name btn btn-outline">Urbano</span>
+            <div class="category-card category-card--urban">
+                <a href="#" class="category-card__link">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__name btn btn--outline">Urbano</span>
                 </a>
             </div>
-            <div class="category-card esportivo">
-                <a href="#" class="category-link">
-                    <span class="overlay"></span>
-                    <span class="category-name btn btn-outline">Esportivo</span>
+            <div class="category-card category-card--sport">
+                <a href="#" class="category-card__link">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__name btn btn--outline">Esportivo</span>
                 </a>
             </div>
-            <div class="category-card techwear">
-                <a href="#" class="category-link">
-                    <span class="overlay"></span>
-                    <span class="category-name btn btn-outline">Techwear</span>
+            <div class="category-card category-card--techwear">
+                <a href="#" class="category-card__link">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__name btn btn--outline">Techwear</span>
                 </a>
             </div>
         </section>
 
-        <!-- Grid com produtos em destaque -->
         <section class="products-grid">
-            <div class="card top1">
-                <div class="top1-content">
-                    <h3 class="top1-tittle">Black Lynx</h3>
-                    <p class="top1-subtittle">Estilo Urbano com atitude</p>
-                    <div class="cta-group">
-                        <a href="#" class="btn btn-outline"> detalhes</a>
+            <div class="product-card product-card--top1">
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Black Lynx</h3>
+                    <p class="product-card__subtitle">Estilo Urbano com atitude</p>
+                    <div class="product-card__cta-group">
+                        <a href="#" class="btn btn--outline"> detalhes</a>
                     </div>
                 </div>
             </div>
-            <div class="card top2"></div>
-            <div class="card midL"></div>
-            <div class="card midR"></div>
-            <div class="card bottomL"></div>
-            <div class="card bottomR"></div>
+            <div class="product-card product-card--top2"></div>
+            <div class="product-card product-card--mid-left"></div>
+            <div class="product-card product-card--mid-right"></div>
+            <div class="product-card product-card--bottom-left"></div>
+            <div class="product-card product-card--bottom-right"></div>
         </section>
     </main>
 
-    <!-- Footer com informações de contato e links -->
     <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-left">
+        <div class="footer__top">
+            <div class="footer__left">
                 <form class="newsletter">
                     <label for="newsletter-email">Inscreva-se em nosso e-mail</label>
-                    <div class="newsletter-box">
+                    <div class="newsletter__box">
                         <input id="newsletter-email" type="email" placeholder="Digite seu email" aria-label="Email">
                         <button type="submit">Inscrever</button>
                     </div>
                 </form>
                 <div class="social">
                     <span>Redes sociais</span>
-                    <ul class="social-list">
+                    <ul class="social__list">
                         <li>
-                            <a href="#" aria-label="Instagram"><span class="icon icon-instagram"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="social__icon social__icon--instagram"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="WhatsApp"><span class="icon icon-whatsapp"></span></a>
+                            <a href="#" aria-label="WhatsApp"><span class="social__icon social__icon--whatsapp"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="YouTube"><span class="icon icon-youtube"></span></a>
+                            <a href="#" aria-label="YouTube"><span class="social__icon social__icon--youtube"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="X"><span class="icon icon-x"></span></a>
+                            <a href="#" aria-label="X"><span class="social__icon social__icon--x"></span></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-links">
-                <div class="link-group">
+            <div class="footer__links">
+                <div class="footer__link-group">
                     <ul>
                         <li>
                             <strong>Masculino</strong>
@@ -173,7 +168,7 @@
                     </ul>
                 </div>
 
-                <div class="link-group">
+                <div class="footer__link-group">
                     <ul>
                         <li>
                             <strong>Feminino</strong>
@@ -187,7 +182,7 @@
                     </ul>
                 </div>
 
-                <div class="link-group">
+                <div class="footer__link-group">
                     <ul>
                         <li>
                             <strong>Outlet</strong>
@@ -199,7 +194,7 @@
                     </ul>
                 </div>
 
-                <div class="link-group">
+                <div class="footer__link-group">
                     <ul>
                         <li>
                             <strong>Nossas Lojas</strong>
@@ -211,7 +206,7 @@
                     </ul>
                 </div>
 
-                <div class="link-group">
+                <div class="footer__link-group">
                     <ul>
                         <li>
                             <strong>Sobre</strong>
@@ -225,10 +220,10 @@
             </div>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer__bottom">
             <p>Copyright. All Rights Reserved</p>
         </div>
-        <p class="footer-credit">
+        <p class="footer__credit">
             Coded by <a href="https://github.com/0rafae1" target="_blank" rel="noopener noreferrer"
                 aria-label="Rafael GitHub profile (opens in a new tab)">Rafael</a>
         </p>

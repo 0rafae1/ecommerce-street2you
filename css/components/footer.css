@@ -1,12 +1,12 @@
 .footer {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: var(--color--text);
+    color: var(--color--text-light);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer-top {
+.footer__top {
     max-width: 1360px;
     margin: 0 auto;
     padding: 2.5rem;
@@ -15,32 +15,33 @@
     gap: 2.5rem;
 }
 
-.footer-left {
+.footer__left {
     display: flex;
     flex-direction: column;
     gap: 2.125rem;
 }
 
-.footer-links {
+.footer__links {
     display: flex;
     gap: 2.5rem;
     flex-wrap: wrap;
 }
 
-.footer-links a {
-    color: #ffffff;
+.footer__links a {
+    color: var(--color--text-light);
 }
 
-.social-list {
+.social__list {
     display: flex;
     gap: 1.25rem;
 }
 
-.icon {
+/* Ícones com mask-image: usa o SVG como máscara para colorir o ícone dinamicamente via background-color no :hover */
+.social__icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background-color: #ffffff;
+    background-color: var(--color--text-light);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -49,109 +50,109 @@
     mask-position: center;
 }
 
-.social-list a:hover .icon {
-    background-color: #f3903d;
+.social__list a:hover .social__icon {
+    background-color: var(--color--primary);
 }
 
-.icon-instagram {
+.social__icon--instagram {
     -webkit-mask-image: url("../../assets/images/icons/instagram.svg");
     mask-image: url("../../assets/images/icons/instagram.svg");
 }
 
-.icon-whatsapp {
+.social__icon--whatsapp {
     -webkit-mask-image: url("../../assets/images/icons/whatsapp.svg");
     mask-image: url("../../assets/images/icons/whatsapp.svg");
 }
 
-.icon-youtube {
+.social__icon--youtube {
     -webkit-mask-image: url("../../assets/images/icons/youtube.svg");
     mask-image: url("../../assets/images/icons/youtube.svg");
 }
 
-.icon-x {
+.social__icon--x {
     -webkit-mask-image: url("../../assets/images/icons/x.svg");
     mask-image: url("../../assets/images/icons/x.svg");
 }
 
-.link-group strong {
-    color: #adadad;
+.footer__link-group strong {
+    color: var(--color--text-muted);
     font-size: 1.0625rem;
     margin-bottom: 1rem;
     display: block;
 }
 
-.link-group li a:hover {
+.footer__link-group li a:hover {
     text-decoration: underline;
 }
 
-.newsletter-box input {
+.newsletter__box input {
     border-radius: 10px;
-    color: #aaaaaa;
+    color: var(--color--text-muted);
     padding: 0.5rem 1.25rem;
     text-align: center;
 }
 
-.newsletter-box button {
+.newsletter__box button {
     border-radius: 10px;
     padding: 0.5rem 0.625rem;
     cursor: pointer;
 }
 
-.footer-bottom {
+.footer__bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     font-size: 1rem;
     padding: 1rem 1rem 0;
-    border-top: 2px solid #4d4d4d;
+    border-top: 2px solid var(--color--border-dark);
 }
 
-.footer-credit {
+.footer__credit {
     display: flex;
     align-items: center;
     gap: 4px;
     padding-bottom: 1rem;
 }
 
-.footer-credit a:hover {
+.footer__credit a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 1000px) {
-    .footer-top {
+    .footer__top {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
         font-size: 0.9rem;
     }
 
-    .footer-left {
+    .footer__left {
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
 
-    .footer-links {
+    .footer__links {
         justify-content: center;
     }
 
-    .link-group strong {
+    .footer__link-group strong {
         font-size: 0.9rem;
     }
 
-    .newsletter-box {
+    .newsletter__box {
         display: flex;
         flex-direction: column;
     }
 
-    .newsletter-box input {
+    .newsletter__box input {
         border-radius: 10px;
-        color: #aaaaaa;
+        color: var(--color--text-muted);
         padding: 0.2rem 1rem;
     }
 
-    .newsletter-box button {
+    .newsletter__box button {
         border-radius: 10px;
         padding: 0.2rem;
         cursor: pointer;
@@ -163,8 +164,8 @@
         gap: 1rem;
     }
 
-    .footer-bottom,
-    .footer-credit {
+    .footer__bottom,
+    .footer__credit {
         font-size: 0.8rem;
     }
 }
