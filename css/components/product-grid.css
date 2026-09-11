@@ -79,3 +79,30 @@
     display: flex;
     gap: 1rem;
 }
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "top1 top1"
+            "top2 top2"
+            "midL midR"
+            "midL bottomR"
+            "bottomL bottomL";
+        max-width: 100%;
+        gap: 0.625rem;
+    }
+    .top1 {
+        min-height: 500px;
+    }
+
+    .midL {
+        min-height: 370px;
+    }
+
+    .top2,
+    .bottomL {
+        min-height: 190px;
+    }
+}
