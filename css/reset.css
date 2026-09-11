@@ -1,13 +1,11 @@
 /* Reset CSS baseado no reset do Andy Bell */
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -29,12 +27,10 @@ ol[role="list"] {
 	list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
 	scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
@@ -49,7 +45,7 @@ a:not([class]) {
 
 a,
 a:visited {
-text-decoration: none;
+	text-decoration: none;
 }
 
 ul,
@@ -58,14 +54,12 @@ ol {
 	padding: 0;
 }
 
-/* Make images easier to work with */
 img,
 picture {
 	max-width: 100%;
 	display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
