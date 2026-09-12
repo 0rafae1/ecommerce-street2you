@@ -5,11 +5,13 @@
 **Street2You** is a modern, responsive e-commerce landing page focused on urban fashion and streetwear culture. The project was built with an emphasis on semantic HTML5 structure, modular CSS3 architecture, and responsive design adapted for multiple screen sizes.
  
 <div align="center">
+
 [![Deploy with GitHub Pages](https://img.shields.io/badge/View%20Project-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://0rafae1.github.io/ecommerce-street2you/)
  
 👉 **[Click here for the live demo](https://0rafae1.github.io/ecommerce-street2you/)** 👈
  
 </div>
+
 ---
  
 ## Table of contents
