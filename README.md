@@ -63,6 +63,7 @@ Users should be able to:
 - **CSS Flexbox:** used to align and distribute elements in the header, category cards, and footer.
 - **CSS Variables (Custom Properties):** centralized color and typography variables.
 - **BEM naming convention:** component classes follow the Block__Element--Modifier pattern, and CSS custom properties follow a `--block--modifier` naming scheme inspired by BEM.
+- **Accessibility (a11y):** visible `:focus-visible` states, WCAG AA color contrast, ~44px touch targets, and semantic ARIA attributes (`role`, `aria-label`, `aria-hidden`) for screen reader support.
 - **Media Queries:** responsive breakpoints at 1280px, 1000px, 768px, and 500px.
 - **Modern CSS Reset:** based on *Andy Bell*'s solution, to keep styles consistent across browsers.
 - **SVG Masks (`mask-image`):** used to control icon color and hover effects without needing multiple image files.
@@ -118,6 +119,23 @@ Later on, I migrated all component classes to the **BEM** convention (`Block__El
   --color--text-light: #ffffff;
 }
 ```
+I also ran an accessibility pass across the project, checking form labels, touch target sizes, color contrast, keyboard focus, image alternatives, and heading order. This surfaced a few real issues I hadn't considered: an `aria-label` on an input was silently overriding its visible `<label>` text for screen readers, and the mobile menu checkbox used `display: none`, which removes an element from keyboard navigation entirely. To fix the second one without changing the visual design, I added a `.visually-hidden` utility class (using `position: absolute` + `clip`, not just `width`/`height: 1px`) to hide content visually while keeping it available to assistive technology:
+
+```css
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+```
+
+I used it to add a visible focus ring site-wide (`:focus-visible`), fix the `aria-label`/`label` conflict on the newsletter form, add `role="img"` with descriptive `aria-label`s to product cards rendered as empty `<div>`s with a CSS background image, and correct the heading order by adding hidden `<h2>`s before sections that were missing one.
  
 ### Continued development
   
