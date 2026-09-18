@@ -27,6 +27,13 @@
     flex-wrap: wrap;
 }
 
+.footer a:focus-visible,
+.footer button:focus-visible,
+.footer input:focus-visible {
+    outline: 3px solid var(--color--background);
+    outline-offset: 3px;
+}
+
 .footer__links a {
     color: var(--color--text-light);
 }
@@ -34,6 +41,14 @@
 .social__list {
     display: flex;
     gap: 1.25rem;
+}
+
+.social__list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 /* Ícones com mask-image: usa o SVG como máscara para colorir o ícone dinamicamente via background-color no :hover */
@@ -74,11 +89,13 @@
     mask-image: url("../../assets/images/icons/x.svg");
 }
 
+.footer__link-title,
 .footer__link-group strong {
     color: var(--color--text-muted);
     font-size: 1.0625rem;
     margin-bottom: 1rem;
     display: block;
+    font-weight: 700;
 }
 
 .footer__link-group li a:hover {
@@ -87,15 +104,32 @@
 
 .newsletter__box input {
     border-radius: 10px;
-    color: var(--color--text-muted);
+    color: var(--color--text);
     padding: 0.5rem 1.25rem;
     text-align: center;
+    min-height: 44px;
+}
+
+.newsletter__box input::placeholder {
+    color: #666666;
+    opacity: 1;
 }
 
 .newsletter__box button {
     border-radius: 10px;
-    padding: 0.5rem 0.625rem;
+    padding: 0.5rem 1.25rem;
     cursor: pointer;
+    min-height: 44px;
+    background-color: var(--color--background);
+    color: var(--color--secondary);
+    border: 2px solid transparent;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter__box button:hover {
+    background-color: var(--color--primary);
+    color: var(--color--secondary);
 }
 
 .footer__bottom {
@@ -137,6 +171,7 @@
         justify-content: center;
     }
 
+    .footer__link-title,
     .footer__link-group strong {
         font-size: 0.9rem;
     }
@@ -148,16 +183,18 @@
 
     .newsletter__box input {
         border-radius: 10px;
-        color: var(--color--text-muted);
-        padding: 0.2rem 1rem;
+        color: var(--color--text);
+        padding: 0.5rem 1rem;
+        min-height: 44px;
     }
 
     .newsletter__box button {
         border-radius: 10px;
-        padding: 0.2rem;
+        padding: 0.5rem 1.25rem;
         cursor: pointer;
         align-self: center;
         margin-top: 10px;
+        min-height: 44px;
     }
 
     .social ul {

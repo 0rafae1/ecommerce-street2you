@@ -24,14 +24,15 @@
 <body>
     <header class="header">
         <h1 class="header__logo">
-            <a href="/" title="Street2You - As ruas que encontram você">
+            <a href="/">
                 <img src="./assets/images/icons/logo.svg" alt="Street2You - As ruas que encontram você">
             </a>
         </h1>
 
-        <input type="checkbox" class="header__menu-toggle" id="menu-toggle">
+        <input type="checkbox" class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
         <label for="menu-toggle" class="header__menu-toggle-label">
-            <span class="header__menu-icon header__menu-icon--hamburger"></span>
+            <span class="header__menu-icon header__menu-icon--hamburger" aria-hidden="true"></span>
+            <span class="visually-hidden">Menu de navegação</span>
         </label>
 
         <div class="header__nav-container">
@@ -48,17 +49,17 @@
                     <li><a href="#">Sobre</a></li>
                     <li>
                         <a href="#" aria-label="Minha conta">
-                            <span class="header__nav-icon header__nav-icon--user"></span>
+                            <span class="header__nav-icon header__nav-icon--user" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Ajuda">
-                            <span class="header__nav-icon header__nav-icon--help"></span>
+                            <span class="header__nav-icon header__nav-icon--help" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Sacola de compras">
-                            <span class="header__nav-icon header__nav-icon--cart"></span>
+                            <span class="header__nav-icon header__nav-icon--cart" aria-hidden="true"></span>
                         </a>
                     </li>
                 </ul>
@@ -81,6 +82,7 @@
         </section>
 
         <section class="categories">
+            <h2 class="visually-hidden">Categorias</h2>
             <div class="category-card category-card--basic">
                 <a href="#" class="category-card__link">
                     <span class="category-card__overlay"></span>
@@ -108,6 +110,7 @@
         </section>
 
         <section class="products-grid">
+            <h2 class="visually-hidden">Destaques da Coleção</h2>
             <div class="product-card product-card--top1">
                 <div class="product-card__content">
                     <h3 class="product-card__title">Black Lynx</h3>
@@ -117,11 +120,11 @@
                     </div>
                 </div>
             </div>
-            <div class="product-card product-card--top2"></div>
-            <div class="product-card product-card--mid-left"></div>
-            <div class="product-card product-card--mid-right"></div>
-            <div class="product-card product-card--bottom-left"></div>
-            <div class="product-card product-card--bottom-right"></div>
+            <div class="product-card product-card--top2" role="img" aria-label="Foto do tênis Desert Camo"></div>
+            <div class="product-card product-card--mid-left" role="img" aria-label="Foto de Modelo Masculino"></div>
+            <div class="product-card product-card--mid-right" role="img" aria-label="Foto do tênis Solstice Caramel"></div>
+            <div class="product-card product-card--bottom-left" role="img" aria-label="Foto do tênis Nomad Olive"></div>
+            <div class="product-card product-card--bottom-right" role="img" aria-label="Foto do tênis Wave Ridge"></div>
         </section>
     </main>
 
@@ -131,7 +134,7 @@
                 <form class="newsletter">
                     <label for="newsletter-email">Inscreva-se em nosso e-mail</label>
                     <div class="newsletter__box">
-                        <input id="newsletter-email" type="email" placeholder="Digite seu email" aria-label="Email">
+                        <input id="newsletter-email" type="email" placeholder="Digite seu email" required>
                         <button type="submit">Inscrever</button>
                     </div>
                 </form>
@@ -139,16 +142,16 @@
                     <span>Redes sociais</span>
                     <ul class="social__list">
                         <li>
-                            <a href="#" aria-label="Instagram"><span class="social__icon social__icon--instagram"></span></a>
+                            <a href="#" aria-label="Instagram"><span class="social__icon social__icon--instagram" aria-hidden="true"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="WhatsApp"><span class="social__icon social__icon--whatsapp"></span></a>
+                            <a href="#" aria-label="WhatsApp"><span class="social__icon social__icon--whatsapp" aria-hidden="true"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="YouTube"><span class="social__icon social__icon--youtube"></span></a>
+                            <a href="#" aria-label="YouTube"><span class="social__icon social__icon--youtube" aria-hidden="true"></span></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="X"><span class="social__icon social__icon--x"></span></a>
+                            <a href="#" aria-label="X"><span class="social__icon social__icon--x" aria-hidden="true"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -157,7 +160,7 @@
                 <div class="footer__link-group">
                     <ul>
                         <li>
-                            <strong>Masculino</strong>
+                            <h3 class="footer__link-title">Masculino</h3>
                             <ul>
                                 <li><a href="#">Básico</a></li>
                                 <li><a href="#">Urbano</a></li>
@@ -171,7 +174,7 @@
                 <div class="footer__link-group">
                     <ul>
                         <li>
-                            <strong>Feminino</strong>
+                            <h3 class="footer__link-title">Feminino</h3>
                             <ul>
                                 <li><a href="#">Básico</a></li>
                                 <li><a href="#">Urbano</a></li>
@@ -185,7 +188,7 @@
                 <div class="footer__link-group">
                     <ul>
                         <li>
-                            <strong>Outlet</strong>
+                            <h3 class="footer__link-title">Outlet</h3>
                             <ul>
                                 <li><a href="#">Masculino</a></li>
                                 <li><a href="#">Feminino</a></li>
@@ -197,7 +200,7 @@
                 <div class="footer__link-group">
                     <ul>
                         <li>
-                            <strong>Nossas Lojas</strong>
+                            <h3 class="footer__link-title">Nossas Lojas</h3>
                             <ul>
                                 <li><a href="#">Loja física</a></li>
                                 <li><a href="#">Loja online</a></li>
@@ -209,7 +212,7 @@
                 <div class="footer__link-group">
                     <ul>
                         <li>
-                            <strong>Sobre</strong>
+                            <h3 class="footer__link-title">Sobre</h3>
                             <ul>
                                 <li><a href="#">Quem somos</a></li>
                                 <li><a href="#">Missão</a></li>
